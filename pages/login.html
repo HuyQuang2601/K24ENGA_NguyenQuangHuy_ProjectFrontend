@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/assets/fonts/font.css"/>
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css
+    " rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="h1">
+          <h1>Đăng nhập</h1>
+        </div>
+        <div class="h2">
+          <p>Đăng nhập tài khoản để sử dụng hệ thống quản lý</p>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="boxx-2">
+          <div class="box-2 form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="boxx-3">
+          <div class="box-3 form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" name="password" id="password" />
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="boxx-4">
+          <div class="box-4">
+            <input type="checkbox" name="check" id="check" />
+            <label for="check">Nhớ tài khoản</label>
+          </div>
+          <p class="forgetPassword">Quên mật khẩu?</p>
+        </div>
+        <button type="submit" class="button">Đăng nhập</button><br />
+        <p class="text">
+          Bạn chưa có tài khoản?<a href="./register.html" class="sign-in" style="color: #1a0dee">
+            Đăng ký
+          </a>
+        </p>
+        <form id="loginForm" style="display: none;">
+          <input type="email" id="email-hidden" />
+          <input type="password" id="password-hidden" />
+        </form>
+      </div>
+    </div>
+    <script src="/js/login.js"></script>
+    <script src="
+      https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js
+      "></script>
+  </body>
+</html>

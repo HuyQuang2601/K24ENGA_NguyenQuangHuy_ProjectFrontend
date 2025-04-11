@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    width: 480px;
+    text-align: center;
+    position: fixed;
+}
+
+.form {
+    height: 480px;
+}
+
+.name-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+
+}
+
+.form-group {
+    text-align: left;
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+.form-group label {
+    color: #344054;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 6px;
+    
+}
+
+.box-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    font-weight: 600;
+    line-height: 44px;
+    font-size: 36px;
+}
+
+.text1 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #667085;
+}
+
+.name-group .form-group {
+    width: 50%;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1A0DEE;
+}
+button:hover {
+    background: #0056b3;
+}
+
+
+a {
+    text-decoration: none;
+    color: #1A0DEE;
+}
+
+.check-box {
+    padding: 12px 0 24px 0;
+    text-align: left;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.box-2 {
+    margin-top: 24px;
+   
+}
+
+.login {
+    margin-top: -80px;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.form-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+.error-message {
+    color: #ff0000;
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.form-group.invalid .error-message {
+    display: block;
+    margin-top: 3px;
+}
+
+.form-group.invalid input {
+    border-color: #ff0000;
+}

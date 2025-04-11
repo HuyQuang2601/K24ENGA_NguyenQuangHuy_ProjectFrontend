@@ -1,0 +1,164 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding: 100px;
+   margin-top: -100px;
+}
+
+.container .header{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 100px;
+}
+
+
+.container .h2{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #667085;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main #email{
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    gap: 8px;
+    border-radius: 8px;
+    border-width: 1px;
+    border:1px solid #D0D5DD;
+}
+
+.main #password{
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    gap: 8px;
+    border-radius: 8px;
+    border-width: 1px;
+    border:1px solid #D0D5DD;
+}
+
+.button{
+    height: 48px;
+    border-radius: 8px;
+    border-width: 1px;
+    background-color: #1A0DEE;
+    cursor: pointer;
+    color: white;
+}
+
+.boxx-2{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.box-2{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.boxx-3{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.box-3{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.boxx-4{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.text{
+    text-align: center;
+}
+
+.sign-in{
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #69b0c7;
+}
+
+.forgetPassword{
+    color: #1A0DEE;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: #1A0DEE;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .form-group input {
+    border: 1px solid #ccc;
+  }
+  
+  .error-message {
+    color: #ff0000;
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  
+  .form-group.invalid .error-message {
+    display: block;
+    margin-top: 7px;
+  }
+  
+  .form-group.invalid input {
+    border-color: #ff0000;
+  }
+
+  .hidden {
+    display: none;
+}
+
+.invalid .error-message {
+    color: red;
+    font-size: 12px;
+    display: flex;
+    margin-top: 5px;
+}
+
+
+
+
+

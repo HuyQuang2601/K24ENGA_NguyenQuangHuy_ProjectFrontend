@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/dashboard.css">
+<link rel="stylesheet" href="/assets/fonts/font.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css
+" rel="stylesheet">
+<body>
+    <header class="header">
+            <input type="search" class="search" placeholder="Tìm kiếm">
+            
+            <span class="header-page">
+                <a class="home-page" href="/pages/dashboard.html">Trang chủ</a>
+                <a href="/pages/category-manager.html">Môn học</a>
+                <a href="/pages/subject-manager.html">Bài học</a>
+            </span>
+            <span class="header-icon">
+                <a href="">
+                    <img
+                    width="20px"
+                    height="17.83px"
+                    src="/assets/icons/love.png" alt="">
+                </a>
+                
+                <div class="dropdown">
+                    <a class="human" id="human" href="/pages/login.html" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img width="17px" height="22px" src="/assets/icons/human.png" alt="">
+                    </a>
+                
+                    <ul class="dropdown-menu">
+                        <li> 
+                            <a href="#" id="logoutLink">Đăng xuất</a>
+                        </li>
+                        <li> 
+                            <a href="#" id="logoutLink">Đăng nhập</a>
+                        </li> 
+                        <li> 
+                            <a href="#" id="logoutLink">Đăng ký</a>
+                        </li>                     
+                    </ul>
+                </div>
+
+            </span>
+    </header>
+
+    <main class="main">
+        <div class="progress">
+            <a class="progress-child" href="">Tất cả môn học</a>
+            <a class="progress-child" href="">Đã hoàn thành</a>
+            <a class="progress-child" href="">Chưa hoàn thành</a>
+        </div>
+        <div class="project-container">
+        <div class="project">
+            <h2>Lập trình C</h2>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 01: Tổng quan về ngôn ngữ C</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 02: Câu lệnh điều kiện</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 03: Vòng lặp</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 04: Chuỗi trong C</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 05: Con trỏ</span>
+            </div>
+            <p>Xem thêm</p>
+        </div>
+
+        
+        <div class="project">
+            <h2>CSS cơ bản</h2>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 01: Tổng quan về CSS</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 02: Nhúng CSS vào trang Web</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 03: Position</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 04: Flexbox</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 05: Animation</span>
+            </div>
+            <p>Xem thêm</p>
+        </div>
+
+        <div class="project">
+            <h2>JavaScript cơ bản</h2>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 01: Tổng quan ngôn ngữ JavaScript</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 02: Khai báo biến</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 03: Câu lệnh điều kiện</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 04: Vòng lặp</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 05: Mảng</span>
+            </div>
+            <p>Xem thêm</p>
+        </div>
+
+        <div class="project">
+            <h2>Lập trình với React.js</h2>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 01: Tổng quan về React.js</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 02: Props, State, Event</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 03: React hook</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 04: UI Framework</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 05: React Router</span>
+            </div>
+            <p>Xem thêm</p>
+
+        </div>
+        <div class="project">
+            <h2>Lập trình với Java</h2>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 01: Tổng quan về ngôn ngữ Java</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 02: Khai báo biến</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 03: Câu lệnh điều kiện</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 04: Vòng lặp</span>
+            </div>
+            <div class="session">
+                <img
+                height="24px" width="24px"
+                src="/assets/icons/circle-ok.png" alt="">
+                <span> Session 05: Mảng</span>
+            </div>
+            <p>Xem thêm</p>
+        </div>
+
+        <div class="project">
+            <h2>Lập trình C</h2>
+            <div class="none-project">
+                <p>Chưa có bài học nào</p>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+        <div class="footer-box1">
+            <p>Chúng tôi cung cấp giải pháp học tập, giúp học sinh và viên học tập tốt hơn và hiệu quả hơn</p>
+        </div>
+            <div class="footer-box2">
+                <h3>Danh mục</h3>
+                <a href="/pages/category-manager.html">Môn học</a>
+                <a href="/pages/subject-manager.html">Bài học</a>
+                <a href="">Ghi chú</a>
+            </div>
+            <div class="footer-box3">
+                <h3>Hỗ trợ khách hàng</h3>
+                <a href="">Tìm kiếm dịch vụ</a>
+                <a href="">Điều khoản sử dụng</a>
+                <a href="">Chính sách và điều khoản</a>
+            </div>
+        </div>
+        <div class="icon-contact">
+            <img width="16px" height="16px"
+             src="/assets/icons/Twitter.png" alt="">
+            <img width="16px" height="16px"
+             src="/assets/icons/Facebook.png" alt="">
+            <img width="16px" height="16px"
+             src="/assets/icons/tiktok.png" alt="">
+            <img width="16px" height="16px"
+             src="/assets/icons/Instagram.png" alt="">
+        </div>
+    </footer>
+
+    <div id="logoutModal" class="logout-modal" style="display: none;">
+        <p>Bạn có chắc chắn muốn đăng xuất?</p>
+        <button id="confirmLogout" class="logout-button">Đăng xuất</button>
+        <button id="cancelLogout" class="logout-button" style="background-color: #6c757d; margin-top: 10px;">Hủy</button>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js
+    "></script>
+</body>
+</html>

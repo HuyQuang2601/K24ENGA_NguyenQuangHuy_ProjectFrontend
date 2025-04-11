@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://learn.rikkeiacademy.com/favicon.ico.png" type="image/x-icon" />
+    <title>Quản lý bài học</title>
+    <link rel="stylesheet" href="/assets/fonts/font.css" />
+    <link rel="stylesheet" href="/css/subject-manager.css" />
+    <link rel="stylesheet" href="/css/base.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="/assets/icons/book.png" alt="Study Tracker Logo" class="logo" />
+                <div class="sidebar-text">
+                    <span class="sidebar-title">Study Tracker</span>
+                    <span class="sidebar-subtitle">Quản lý tiến độ học tập</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item">
+                    <img class="item-1" src="/assets/icons/static.png" alt="" />
+                    <span>Thống kê</span>
+                </a>
+                <a href="./category-manager.html" class="menu-item">
+                    <img class="item-2" src="/assets/icons/Notebook.png" alt="" />
+                    <span>Quản lý môn học</span>
+                </a>
+                <a href="./subject-manager.html" class="menu-item">
+                    <img class="item-3" src="/assets/icons/menu-project.png" alt="" />
+                    <span>Quản lý bài học</span>
+                </a>
+            </nav>
+        </div>
+        <div class="content">
+            <header class="header">
+                <div class="icon-1">
+                    <img class="img-1" src="/assets/icons/menu.png" alt="" />
+                </div>
+                <div class="icon-2">
+                    <img class="img-2" src="/assets/icons/bell.png" alt="" />
+                    <img class="img-3" src="/assets/icons/Question mark circle.png" alt="" />
+                    <img class="img-3" src="/assets/icons/Cog settings.png" alt="" />
+                    <img class="img-4" src="/assets/icons/Avatar w. photo.png" alt="" />
+                </div>
+            </header>
+            <hr />
+            <main class="main">
+                <div class="category-manager">
+                    <div class="category-header">
+                        <h3 class="category-title">Bài học</h3>
+                        <button id="buttonAddCategory" class="button">Thêm mới bài học</button>
+                    </div>
+                    <div class="category-search">
+                        <div class="category-function">
+                            <select class="select">
+                                <option value="">Lọc theo môn học</option>
+                                <option value="">Đã hoàn thành</option>
+                                <option value="">Chưa hoàn thành</option>
+                            </select>
+                            <div class="input-search-container">
+                                <input class="input-search" type="text" placeholder="Tìm kiếm bài học theo tên." />
+                                <img class="search-icon" src="/assets/icons/search.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <table class="category-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="selectAll"></th>
+                                <th style="color: #667085">Tên bài học<span><img style="width: 10px" src="/assets/icons/downarrow.png" alt="" /></span></th>
+                                <th style="color: #667085">Tên môn học<span><img style="width: 10px" src="/assets/icons/downarrow.png" alt="" /></span></th>
+                                <th style="color: #667085">Thời gian học<span><img style="width: 10px" src="/assets/icons/downarrow.png" alt="" /></span></th>
+                                <th style="color: #667085">Trạng thái</th>
+                                <th style="color: #667085" colspan="3">Chức năng</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="pagination">
+                        <button class="page-btn prev"><img class="arrow-left" src="/assets/icons/arrowleft.png" alt=""></button>
+                        <span id="pageNumbers"></span>
+                        <button class="page-btn next"><img class="arrow-right" src="/assets/icons/arrowright.png" alt=""></button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Form thêm mới/cập nhật bài học -->
+    <div class="overlay" id="formCategory" style="display: none;">
+        <form class="form-category">
+            <div class="form-header">
+                <h3>Thêm mới bài học</h3>
+                <img width="24px" id="iconCloseFormCategory" src="/assets/icons/close.png" alt="">
+            </div>
+            <div class="add-new-category">
+                <label for="categoryName">Tên bài học</label>
+                <input type="text" id="categoryName" />
+                <span id="nameError" class="error-message" style="color: red; font-size: 12px; display: none;">Tên bài học không được để trống!</span>
+                <span id="duplicateError" class="error-message" style="color: red; font-size: 12px; display: none;">Tên bài học không được trùng!</span>
+            </div>
+            <div class="add-new-subject">
+                <label for="subjectName">Tên môn học</label>
+                <input type="text" id="subjectName" />
+                <span id="subjectError" class="error-message" style="color: red; font-size: 12px; display: none;">Tên môn học không được để trống!</span>
+            </div>
+            <div class="add-new-time">
+                <label for="timeEdit">Thời gian học</label>
+                <input type="number" id="timeEdit" class="form-control" />
+                <span id="timeError" class="error-message" style="color: red; font-size: 12px; display: none;">Thời gian học phải lớn hơn 0!</span>
+            </div>
+            <div class="form-footer">
+                <label>Trạng thái</label>
+                <div class="changeActive">
+                    <input type="radio" name="status" value="active" id="activeEdit" />
+                    <label for="activeEdit">Đã hoàn thành</label>
+                    <input type="radio" name="status" value="inactive" id="inactiveEdit" />
+                    <label for="inactiveEdit">Chưa hoàn thành</label>
+                </div>
+            </div>
+            <div class="foot">
+                <button type="button" id="btnCloseFormCategory">Hủy</button>
+                <button type="button" id="btnAddFormCategory">Thêm</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal xóa -->
+    <div id="deleteModal" class="overlay" style="display: none;">
+        <div class="delete-modal-content">
+            <img height="48px" width="48px" src="/assets/icons/notice.png" alt="">
+            <p class="accept">Xác nhận</p>
+            <p class="text-1">Bạn có chắc chắn muốn xóa bài học 
+                <span class="text-2" id="deleteSubjectName"></span>
+                <span class="text-1">khỏi hệ thống không?</span>
+            </p>
+            <div class="delete-modal-buttons">
+                <button class="btn-cancel" id="cancelDeleteButton">Hủy</button>
+                <button class="btn-delete" id="confirmDeleteButton">Xóa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal đăng xuất -->
+    <div id="logoutModal" class="logout-modal" style="display: none;">
+        <button id="logoutButton" class="logout-button">Đăng xuất</button>
+    </div>
+
+    <script src="/js/subject-manager.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

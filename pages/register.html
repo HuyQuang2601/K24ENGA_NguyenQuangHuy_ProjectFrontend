@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    
+</head>
+<link rel="stylesheet" href="/css/register.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/assets/fonts/font.css">
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js
+"></script>
+<body>
+    <div class="container">
+        <div class="box-1">
+            <h2>Đăng ký tài khoản</h2>
+            <p class="text1">Đăng ký tài khoản để sử dụng dịch vụ</p>
+        </div>
+        <div class="box-2">
+            <form id="registerForm" class="form">
+                <div class="name-group">
+                    <div class="form-group">
+                        <label for="fullName">Họ và tên đệm</label>
+                        <input type="text" id="fullName">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">Tên</label>
+                        <input type="text" id="firstName">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label> <br>
+                    <input type="email" id="email" placeholder="you@company.com">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label> <br>
+                    <input type="password" id="password">
+                    <span class="error-message"></span>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" id="terms">
+                    <span>Bạn đồng ý với <a href="">chính sách và điều khoản</a></span>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit">Đăng ký</button>
+            </form>
+        </div>
+        <p class="login">Đã có tài khoản? <a href="./login.html">Đăng nhập</a></p>
+    </div>
+
+    <script src="/js/register.js"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css
+" rel="stylesheet">
+</body>
+</html>
